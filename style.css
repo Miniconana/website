@@ -27,6 +27,7 @@ body {
     background-color: transparent;
     color: #f8fafc;
     line-height: 1.6;
+    padding-bottom: 5rem; /* Extra space so the fixed music bar doesn't cover the footer */
 }
 
 /* Navigation */
@@ -147,4 +148,50 @@ footer {
     color: #94a3b8;
     margin-top: 2rem;
     border-top: 1px solid #334155;
+}
+
+.music-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid #334155;
+    padding: 0.75rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    z-index: 20;
+}
+
+.track-info {
+    font-weight: 600;
+    color: #38bdf8;
+    min-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.player-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.music-bar button {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.9rem;
+}
+
+.progress-wrap {
+    flex: 1;
+    max-width: 360px;
+}
+
+#seekBar {
+    width: 100%;
+    accent-color: #38bdf8;
+    cursor: pointer;
 }
