@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jared Isidoro — Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="Eye to eye.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <nav>
+            <div class="logo">Jared Isidoro</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Return to Homepage</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Newspaper Two-Column Layout -->
+        <div class="newspaper-layout container">
+            <!-- LEFT COLUMN: Schools -->
+            <aside id="schools" class="schools-col">
+                <h2>Schools</h2>
+
+                <article class="news-item">
+                    <h3>University of Santo Tomas Angelicum</h3>
+                    <p class="news-meta">2017 – 2023</p>
+                    <p>Graduated Junior High School. Participated in outreach programs and community service initiatives.</p>
+                </article>
+
+                <article class="news-item">
+                    <h3>CIIT College of Innovation and Technology</h3>
+                    <p class="news-meta">2024 – Present</p>
+                    <p>Graduated Senior High School and currently studying BS Entertainment and Multimedia Computing. Recognized as Top 6 in class and quarterly honor student, with workshops and seminars in the field.</p>
+                </article>
+            </aside>
+
+            <!-- RIGHT COLUMN: About + Projects -->
+            <div class="main-col">
+                <section id="about" class="news-section">
+                    <h2>About</h2>
+                    <p>This website contains the achievements, interests, and projects Jared Isidoro has done. Achievements are listed in the projects section, and interests are listed in the about section. Built with HTML, CSS, and JavaScript, with AI assistance for structure while the content is written by Jared Isidoro.</p>
+                </section>
+
+                <section id="projects" class="news-section">
+                    <h2>Projects</h2>
+                    <div class="grid">
+                        <div class="card">
+                            <h3>The Sapphire Fungus</h3>
+                            <p>An MLP AU written by Jared Isidoro with a planned release on fanfiction sites in early–mid 2027.</p>
+                        </div>
+                        <div class="card">
+                            <h3>ME-1945</h3>
+                            <p>A planned WWII top-down "shoot 'em up" style pixel art game featuring an Me 262 against Allied forces. Planned for late 2027–2028.</p>
+                        </div>
+                        <div class="card">
+                            <h3>A Newbie's Guide to Being a Military Nerd</h3>
+                            <p>A guide introducing newcomers to military branches, historical events, and military culture.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2026 Jared Isidoro. All rights reserved.</p>
+    </footer>
+
+    <!-- Music player -->
+    <div class="music-bar" aria-label="Music player">
+        <div class="track-info">
+            <span id="trackTitle">I will stand (BG musicvideo)</span>
+        </div>
+
+        <div class="player-controls">
+            <button type="button" id="prevBtn" aria-label="Previous track">Prev</button>
+            <button type="button" id="playPauseBtn" aria-label="Play or pause">Play</button>
+            <button type="button" id="nextBtn" aria-label="Next track">Next</button>
+        </div>
+
+        <div class="progress-wrap">
+            <input type="range" id="seekBar" value="0" min="0" max="100" step="1" aria-label="Seek">
+        </div>
+
+        <audio id="audioPlayer" preload="metadata"></audio>
+    </div>
+</body>
+</html>
