@@ -1,4 +1,3 @@
-/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Background Video Styling */
 #bg-video {
     position: fixed;
     top: 0;
@@ -19,10 +17,9 @@ html {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(0.5);
+    filter: brightness(0.45);
 }
 
-/* Transparent body so the video shows through */
 body {
     background-color: transparent;
     color: #f8fafc;
@@ -30,10 +27,9 @@ body {
     padding-bottom: 5rem;
 }
 
-/* Navigation */
 header {
-    background-color: rgba(30, 41, 59, 0.85);
-    backdrop-filter: blur(6px);
+    background-color: rgba(30, 41, 59, 0.88);
+    backdrop-filter: blur(8px);
     padding: 1rem 5%;
     position: sticky;
     top: 0;
@@ -47,6 +43,8 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -59,11 +57,13 @@ nav {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
     color: #cbd5e1;
     text-decoration: none;
+    font-weight: 500;
     transition: color 0.2s;
 }
 
@@ -71,22 +71,40 @@ nav {
     color: #38bdf8;
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
-    padding: 4.5rem 1rem;
-    background: rgba(15, 23, 42, 0.35);
+    padding: 4.5rem 1.5rem;
+    background: rgba(15, 23, 42, 0.45);
+    border-bottom: 1px solid rgba(51, 65, 85, 0.7);
+}
+
+.eyebrow {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #38bdf8;
+    margin-bottom: 0.5rem;
 }
 
 .hero h1 {
     font-size: 2.6rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
 }
 
-.hero p {
-    color: #cbd5e1;
+.tagline {
+    color: #e2e8f0;
     font-size: 1.15rem;
-    margin-bottom: 1.75rem;
+    font-weight: 500;
+    max-width: 720px;
+    margin: 0 auto 0.65rem;
+}
+
+.intro-copy {
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    max-width: 680px;
+    margin: 0 auto 1.75rem;
 }
 
 button {
@@ -105,28 +123,26 @@ button:hover {
     background-color: #7dd3fc;
 }
 
-/* Main Content Containers */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 5%;
 }
 
-/* Newspaper Two-Column Layout */
 .newspaper-layout {
     display: grid;
-    grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+    grid-template-columns: minmax(270px, 330px) minmax(0, 1fr);
     gap: 2.5rem;
     align-items: start;
 }
 
 .schools-col {
-    background-color: rgba(15, 23, 42, 0.72);
+    background-color: rgba(15, 23, 42, 0.76);
     backdrop-filter: blur(8px);
     border: 1px solid #334155;
+    border-right: 3px solid #38bdf8;
     border-radius: 8px;
     padding: 1.5rem;
-    border-right: 3px solid #38bdf8; /* Newspaper column rule */
 }
 
 .news-item {
@@ -141,7 +157,7 @@ button:hover {
 
 .news-item h3 {
     color: #38bdf8;
-    font-size: 1.1rem;
+    font-size: 1.08rem;
     margin-bottom: 0.2rem;
 }
 
@@ -155,12 +171,12 @@ button:hover {
 .main-col {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 .news-section {
-    background-color: rgba(15, 23, 42, 0.55);
-    backdrop-filter: blur(6px);
+    background-color: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(8px);
     border: 1px solid #334155;
     border-radius: 8px;
     padding: 1.75rem;
@@ -174,28 +190,266 @@ h2 {
     padding-bottom: 0.25rem;
 }
 
-/* Responsive Card Grid */
+.bio-block p {
+    color: #e2e8f0;
+    margin-bottom: 0.85rem;
+}
+
+.about-split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.info-box {
+    background-color: rgba(30, 41, 59, 0.8);
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.info-box h3 {
+    color: #38bdf8;
+    margin-bottom: 0.65rem;
+    font-size: 1.15rem;
+}
+
+.sub-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    font-weight: 700;
+    margin-top: 0.65rem;
+    margin-bottom: 0.45rem;
+}
+
+.sub-label:first-of-type {
+    margin-top: 0;
+}
+
+.tag-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.tag-list li {
+    background-color: rgba(15, 23, 42, 0.85);
+    border: 1px solid #475569;
+    color: #e2e8f0;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+.strength-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.93rem;
+    color: #cbd5e1;
+}
+
+.strength-list strong {
+    color: #f8fafc;
+}
+
+.section-header-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.section-header-tabs h2 {
+    margin-bottom: 0;
+}
+
+.tab-bar {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background-color: rgba(30, 41, 59, 0.85);
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    padding: 0.45rem 0.95rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.tab-btn:hover {
+    background-color: rgba(51, 65, 85, 0.95);
+    color: #f8fafc;
+}
+
+.tab-btn.active {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border-color: #38bdf8;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1.25rem;
     align-items: start;
 }
 
 .card {
-    background-color: rgba(30, 41, 59, 0.85);
+    background-color: rgba(30, 41, 59, 0.88);
     backdrop-filter: blur(6px);
     padding: 1.25rem;
     border-radius: 8px;
     border: 1px solid #334155;
 }
 
+.card-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #7dd3fc;
+    margin-bottom: 0.3rem;
+}
+
 .card h3 {
     margin-bottom: 0.5rem;
     color: #38bdf8;
+    font-size: 1.08rem;
 }
 
-/* Stack into one column on tablets/phones */
+.card p {
+    color: #cbd5e1;
+    font-size: 0.93rem;
+}
+
+.tab-panel .grid {
+    display: block;
+    column-count: 2;
+    column-gap: 1.25rem;
+}
+
+.tab-panel .card {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    break-inside: avoid;
+}
+
+@media (max-width: 700px) {
+    .tab-panel .grid {
+        column-count: 1;
+    }
+}
+
+.contact-intro {
+    color: #cbd5e1;
+    margin-bottom: 1.25rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.contact-details,
+.contact-form {
+    background-color: rgba(30, 41, 59, 0.82);
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.contact-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+.contact-details a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #475569;
+    background-color: rgba(15, 23, 42, 0.85);
+    color: #f8fafc;
+    font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+.form-status {
+    font-size: 0.9rem;
+    color: #7dd3fc;
+    min-height: 1.2rem;
+}
+
 @media (max-width: 900px) {
     .newspaper-layout {
         grid-template-columns: 1fr;
@@ -207,7 +461,6 @@ h2 {
     }
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
@@ -217,7 +470,15 @@ footer {
     border-top: 1px solid #334155;
 }
 
-/* Music Bar */
+footer a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 .music-bar {
     position: fixed;
     bottom: 0;

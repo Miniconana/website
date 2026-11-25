@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jared Isidoro — Portfolio</title>
+    <title>Contact Jared Isidoro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,65 +15,68 @@
         <nav>
             <div class="logo">Jared Isidoro</div>
             <ul class="nav-links">
-                <li><a href="index.html">Return to Homepage</a></li>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#schools">Schools</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
+        <section class="news-section">
+            <h2>Contact</h2>
+            <p class="contact-intro">(insert sentence)</p>
 
-        <!-- Newspaper Two-Column Layout -->
-        <div class="newspaper-layout container">
-            <!-- LEFT COLUMN: Schools -->
-            <aside id="schools" class="schools-col">
-                <h2>Schools</h2>
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:(insert sentence)">(insert sentence)</a>
+                    </div>
 
-                <article class="news-item">
-                    <h3>University of Santo Tomas Angelicum</h3>
-                    <p class="news-meta">2017 – 2023</p>
-                    <p>Graduated Junior High School. Participated in outreach programs and community service initiatives.</p>
-                </article>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone</span>
+                        <span>(insert sentence)</span>
+                    </div>
 
-                <article class="news-item">
-                    <h3>CIIT College of Innovation and Technology</h3>
-                    <p class="news-meta">2024 – Present</p>
-                    <p>Graduated Senior High School and currently studying BS Entertainment and Multimedia Computing. Recognized as Top 6 in class and quarterly honor student, with workshops and seminars in the field.</p>
-                </article>
-            </aside>
-
-            <!-- RIGHT COLUMN: About + Projects -->
-            <div class="main-col">
-                <section id="about" class="news-section">
-                    <h2>About</h2>
-                    <p>This website contains the achievements, interests, and projects Jared Isidoro has done. Achievements are listed in the projects section, and interests are listed in the about section. Built with HTML, CSS, and JavaScript, with AI assistance for structure while the content is written by Jared Isidoro.</p>
-                </section>
-
-                <section id="projects" class="news-section">
-                    <h2>Projects</h2>
-                    <div class="grid">
-                        <div class="card">
-                            <h3>The Sapphire Fungus</h3>
-                            <p>An MLP AU written by Jared Isidoro with a planned release on fanfiction sites in early–mid 2027.</p>
-                        </div>
-                        <div class="card">
-                            <h3>ME-1945</h3>
-                            <p>A planned WWII top-down "shoot 'em up" style pixel art game featuring an Me 262 against Allied forces. Planned for late 2027–2028.</p>
-                        </div>
-                        <div class="card">
-                            <h3>A Newbie's Guide to Being a Military Nerd</h3>
-                            <p>A guide introducing newcomers to military branches, historical events, and military culture.</p>
+                    <div class="contact-item">
+                        <span class="contact-label">Profiles</span>
+                        <div class="social-links">
+                            <a href="(insert sentence)" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            <a href="(insert sentence)" target="_blank" rel="noopener noreferrer">Behance</a>
                         </div>
                     </div>
-                </section>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="senderName">Your Name</label>
+                        <input type="text" id="senderName" name="senderName" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senderEmail">Your Email</label>
+                        <input type="email" id="senderEmail" name="senderEmail" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senderMessage">Message</label>
+                        <textarea id="senderMessage" name="senderMessage" rows="4" placeholder="Write your message..." required></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                    <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer id="contact">
-        <p>&copy; 2026 Jared Isidoro. All rights reserved.</p>
+    <footer>
+        <p>(insert sentence)</p>
     </footer>
 
-    <!-- Music player -->
     <div class="music-bar" aria-label="Music player">
         <div class="track-info">
             <span id="trackTitle">I will stand (BG musicvideo)</span>
@@ -91,5 +94,7 @@
 
         <audio id="audioPlayer" preload="metadata"></audio>
     </div>
+
+    <script src="script2.js"></script>
 </body>
 </html>

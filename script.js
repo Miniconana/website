@@ -7,10 +7,43 @@ if (actionBtn && jumpscareVideo) {
         jumpscareVideo.currentTime = 0;
         jumpscareVideo.play();
 
-        // Hide again once the video finishes
         jumpscareVideo.onended = () => {
             jumpscareVideo.style.display = 'none';
         };
+    });
+}
+
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+tabButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const targetId = btn.dataset.tab;
+
+        tabButtons.forEach((b) => {
+            const isSelected = b === btn;
+            b.classList.toggle('active', isSelected);
+            b.setAttribute('aria-selected', String(isSelected));
+        });
+
+        tabPanels.forEach((panel) => {
+            const isMatch = panel.id === targetId;
+            panel.classList.toggle('active', isMatch);
+            panel.hidden = !isMatch;
+        });
+    });
+});
+
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
+if (contactForm && formStatus) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nameInput = document.getElementById('senderName');
+        const sender = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'there';
+        formStatus.textContent = `Thanks, ${sender}! Your message draft has been recorded locally.`;
+        contactForm.reset();
     });
 }
 
@@ -89,12 +122,10 @@ seekBar.addEventListener("input", () => {
     }
 });
 
-// Auto-advance to the next track when one finishes
 audio.addEventListener("ended", () => {
     loadTrack(currentIndex + 1, true);
 });
 
-// Fallback: if the browser blocked immediate autoplay on load, start on first user gesture
 function unlockAudioOnFirstInteraction() {
     if (!autoplaySucceeded && audio.paused) {
         tryPlayAudio();
@@ -106,5 +137,4 @@ function unlockAudioOnFirstInteraction() {
 window.addEventListener("pointerdown", unlockAudioOnFirstInteraction);
 window.addEventListener("keydown", unlockAudioOnFirstInteraction);
 
-// Attempt to start the first track immediately on load
 loadTrack(0, true);

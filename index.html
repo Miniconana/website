@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jared Isidoro — Portfolio</title>
+    <title>Jared Isidoro Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,52 +26,155 @@
 
     <main>
         <section id="home" class="hero">
+            <p class="eyebrow">Jared Carlo "JC" G. Isidoro Block tech - 1</p>
             <h1>Welcome to my website portfolio!</h1>
-            <p>I hope you enjoy your visit!</p>
+            <p class="tagline">Writer | Game designer/Tester | Military &amp; MLP Enthusiast</p>
+            <p class="intro-copy">I hope you enjoy your visit!</p>
             <button type="button" id="actionBtn">Click Me</button>
             <video id="jumpscareVideo" src="1124.mp4" playsinline style="display: none; position: fixed; inset: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: 9999;"></video>
         </section>
 
-        <!-- Newspaper Two-Column Layout -->
         <div class="newspaper-layout container">
-            <!-- LEFT COLUMN: Schools -->
             <aside id="schools" class="schools-col">
                 <h2>Schools</h2>
 
                 <article class="news-item">
                     <h3>University of Santo Tomas Angelicum</h3>
-                    <p class="news-meta">2017 – 2023</p>
+                    <p class="news-meta">2017 to 2023</p>
                     <p>Graduated Junior High School. Participated in outreach programs and community service initiatives.</p>
                 </article>
 
                 <article class="news-item">
                     <h3>CIIT College of Innovation and Technology</h3>
-                    <p class="news-meta">2024 – Present</p>
+                    <p class="news-meta">2024 to Present</p>
                     <p>Graduated Senior High School and currently studying BS Entertainment and Multimedia Computing. Recognized as Top 6 in class and quarterly honor student, with workshops and seminars in the field.</p>
                 </article>
             </aside>
 
-            <!-- RIGHT COLUMN: About + Projects -->
             <div class="main-col">
                 <section id="about" class="news-section">
                     <h2>About</h2>
-                    <p>This website contains the achievements, interests, and projects Jared Isidoro has done. Achievements are listed in the projects section, and interests are listed in the about section. Built with HTML, CSS, and JavaScript, with AI assistance for structure while the content is written by Jared Isidoro.</p>
+                    <div class="bio-block">
+                        <p>This website contains the achievements, interests, and projects Jared Isidoro has done. Achievements are listed in the projects section, and the interests are listed in the about section. Built with HTML, CSS, and JavaScript, with AI assistance for structure while the content is written by Jared Isidoro.</p>
+                        <p>The following are my skills and my strengths:</p>
+                    </div>
+
+                    <div class="about-split">
+                        <div class="info-box">
+                            <h3>Skills</h3>
+                            <p class="sub-label">Technical Skills</p>
+                            <ul class="tag-list">
+                                <li>SQL and Database Tools</li>
+                                <li>Python and VBA (Foundational)</li>
+                                <li>C++</li>
+                                <li>HTML / CSS / JS</li>
+                                <li>Microsoft Office and Data Workflows</li>
+                                <li>Pixel Art and Infographic Design</li>
+                            </ul>
+
+                            <p class="sub-label">Soft Skills</p>
+                            <ul class="tag-list">
+                                <li>Collaborative Problem-Solving</li>
+                                <li>Adaptability</li>
+                                <li>Self-Reflection and Journaling</li>
+                                <li>Resilience Under Busy Schedules</li>
+                                <li>Structured Planning</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-box">
+                            <h3>Strengths</h3>
+                            <p class="sub-label">From Self-Dev and Progress Trackers</p>
+                            <ul class="strength-list">
+                                <li><strong>Collaborative Owl Approach:</strong> Naturally leans toward collaboration and finding fair ground, while learning when compromise isn't the right answer.</li>
+                                <li><strong>Deep-Dive Curiosity:</strong> Able to stay locked in on focused topics, such as whale sharks, hadrosaurs, or missile systems, for multi-hour stretches.</li>
+                                <li><strong>Reframing Overthinking:</strong> Actively catching anxious assumptions, like short replies or missed invites, and replacing them with calmer perspectives.</li>
+                                <li><strong>Structure and Scheduled Breaks:</strong> Using outlines, step-by-step steps, and scheduled breaks to recover focus and relieve stress.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
 
                 <section id="projects" class="news-section">
-                    <h2>Projects</h2>
-                    <div class="grid">
-                        <div class="card">
-                            <h3>The Sapphire Fungus</h3>
-                            <p>An MLP AU written by Jared Isidoro with a planned release on fanfiction sites in early–mid 2027.</p>
+                    <div class="section-header-tabs">
+                        <h2>Projects</h2>
+                        <div class="tab-bar" role="tablist" aria-label="Projects and extra views">
+                            <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="tab-projects">
+                                Projects
+                            </button>
+                            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="tab-course-works">
+                                Course Outputs
+                            </button>
+                            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="tab-achievements">
+                                Achievements
+                            </button>
                         </div>
-                        <div class="card">
-                            <h3>ME-1945</h3>
-                            <p>A planned WWII top-down "shoot 'em up" style pixel art game featuring an Me 262 against Allied forces. Planned for late 2027–2028.</p>
+                    </div>
+
+                    <div id="tab-projects" class="tab-panel active" role="tabpanel">
+                        <div class="grid">
+                            <div class="card">
+                                <h3>The Sapphire Fungus</h3>
+                                <p>An MLP AU written by Jared Isidoro with a planned release on fanfiction sites in early to mid 2027.</p>
+                            </div>
+                            <div class="card">
+                                <h3>ME-1945</h3>
+                                <p>A planned WWII top-down "shoot 'em up" style pixel art game featuring an Me 262 against Allied forces. Planned for late 2027 to 2028.</p>
+                            </div>
+                            <div class="card">
+                                <h3>A Newbie's Guide to Being a Military Nerd</h3>
+                                <p>A guide introducing newcomers to military branches, historical events, and military culture.</p>
+                            </div>
                         </div>
-                        <div class="card">
-                            <h3>A Newbie's Guide to Being a Military Nerd</h3>
-                            <p>A guide introducing newcomers to military branches, historical events, and military culture.</p>
+                    </div>
+
+                    <div id="tab-course-works" class="tab-panel" role="tabpanel" hidden>
+                        <div class="grid">
+                         <div class="card">
+                                <span class="card-tag">Course Output</span>
+                                 <h3>Strengths Map</h3>
+                                 <p><a href="Strengths%20map.pdf" target="_blank" rel="noopener noreferrer">Open Strengths Map (PDF)</a></p>
+                            </div>
+
+                            <div class="card">
+                          <span class="card-tag">My Career Goal</span>
+                                 <h3>Career Goal 1</h3>
+                                 <p><a href="My career goal.pdf" target="_blank" rel="noopener noreferrer">Open My career goal (PDF)</a></p>
+                                </div>
+                            <div class="card">
+                                <span class="card-tag">My Career Goal</span>
+                                     <h3>Career Goal 1</h3>
+                                 <p><a href="SELF-DEV GROUP 3 PPT.pdf" target="_blank" rel="noopener noreferrer">Open My career goal (group work) (PDF)</a></p>
+                                </div>
+
+                            <div class="card">
+                                <span class="card-tag">JC's Progress Report</span>
+                                    <h3>Career Goal 1</h3>
+                                 <p><a href="Personal Journal .pdf" target="_blank" rel="noopener noreferrer">Open My Personal Journal (PDF)</a></p>
+                                </div>
+
+                            <div class="card">
+                                <span class="card-tag">Creative Progress Report and Tracker</span>
+                                <h3>Self-Development Plan 2: Conflict Management</h3>
+                              <p><a href="Creative Progress Report-1.pdf" target="_blank" rel="noopener noreferrer">Open My Personal Journal (PDF)</a></p>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div id="tab-achievements" class="tab-panel" role="tabpanel" hidden>
+                        <div class="grid">
+                            <div class="card">
+                                <h3>Academic Honors</h3>
+                                <p>Top 6 in class and quarterly honor student recognition.</p>
+                            </div>
+                            <div class="card">
+                                <h3>Workshops and Seminars</h3>
+                                <p>Participated in workshops and seminars in multimedia computing, design, and tech.</p>
+                            </div>
+                            <div class="card">
+                                <h3>Rockey Building competition</h3>
+                                <p>Participated and Competed in the Rockey Building competition in UP Diliman.</p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -79,11 +182,10 @@
         </div>
     </main>
 
-    <footer id="contact">
-        <p>&copy; 2026 Jared Isidoro. All rights reserved.</p>
+    <footer>
+        <p>(insert sentence)</p>
     </footer>
 
-    <!-- Music player -->
     <div class="music-bar" aria-label="Music player">
         <div class="track-info">
             <span id="trackTitle">I will stand (BG musicvideo)</span>
